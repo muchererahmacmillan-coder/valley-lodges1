@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valley Lodges | Your Luxury Stay Awaits</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="top-bar">
+      <p>Honde Valley, Hauna Growth Point, Zimbabwe | +263775698154 | info@valleylodges.com</p>
+    </div>
+    <nav class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Valley Lodges Logo" class="logo-img">
+    <span class="logo-text">VALLEY <span>LODGES</span></span>
+  </div>
+
+  <div class="menu-toggle" id="mobile-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="rooms.html" class="active">Rooms & Suites</a></li>
+    <li><a href="dining.html">Dining & Bar</a></li>
+    <li><a href="amenities.html">Our Services</a></li>
+    <li><a href="contacts.html">Contacts</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
+
+  </header>
+
+ <section class="rooms-section fade-in">
+  <h2>Our Rooms & Suites</h2>
+  <p class="rooms-intro">Experience comfort and elegance in every detail — each suite is crafted for a tranquil stay surrounded by nature and luxury.</p>
+
+  <div class="rooms-grid">
+    <!-- Deluxe Room -->
+    <div class="room-card" data-room="deluxe">
+      <img src="images/deluxe1.jpg" alt="Deluxe Room">
+      <h3>Deluxe Room</h3>
+      <p>Elegant space with a pool view, private balcony, and modern amenities.</p>
+      <div class="price">From <span>$120</span> / night</div>
+      <div class="room-actions">
+        <button class="btn view-gallery" data-room="deluxe">View Gallery</button>
+        <a href="contacts.html" class="btn book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Executive Suite -->
+    <div class="room-card" data-room="executive">
+      <img src="images/executive1.jpg" alt="Executive Suite">
+      <h3>Executive Suite</h3>
+      <p>Spacious comfort with a lounge area, king bed, and scenic valley view.</p>
+      <div class="price">From <span>$180</span> / night</div>
+      <div class="room-actions">
+        <button class="btn view-gallery" data-room="executive">View Gallery</button>
+        <a href="contacts.html" class="btn book-btn">Book Now</a>
+      </div>
+    </div>
+
+    <!-- Family Suite -->
+    <div class="room-card" data-room="family">
+      <img src="2 beds.jpg" alt="Family Suite">
+      <h3>Family Suite</h3>
+      <p>Perfect for families — two bedrooms, spacious living area, and garden view.</p>
+      <div class="price">From <span>$220</span> / night</div>
+      <div class="room-actions">
+        <button class="btn view-gallery" data-room="family">View Gallery</button>
+        <a href="contacts.html" class="btn book-btn">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Gallery Modal -->
+<div id="galleryModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <div class="gallery-images">
+      <img src="" alt="Room Image" id="galleryImg">
+    </div>
+    <div class="gallery-controls">
+      <button id="prevBtn">⟨</button>
+      <button id="nextBtn">⟩</button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+  <!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+<!-- Booking Modal (insert into rooms.html) -->
+<div id="bookingModal" class="modal" aria-hidden="true">
+  <div class="modal-content">
+    <span class="close-btn" id="bookingClose">&times;</span>
+    <h2 id="bookingRoomTitle">Book Room</h2>
+
+    <div id="roomDetailsContent">
+      <p id="bookingRoomDesc"></p>
+      <p><strong>Price per night: </strong><span id="bookingPrice"></span></p>
+      <hr>
+    </div>
+
+    <form id="bookingForm" class="booking-form" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="guestName">Full Name</label>
+        <input id="guestName" name="guestName" required placeholder="Your full name">
+      </div>
+
+      <div class="form-group">
+        <label for="guestEmail">Email</label>
+        <input id="guestEmail" name="guestEmail" type="email" required placeholder="you@example.com">
+      </div>
+
+      <div class="form-group">
+        <label for="checkIn">Check-in</label>
+        <input id="checkIn" name="checkIn" type="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="checkOut">Check-out</label>
+        <input id="checkOut" name="checkOut" type="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="paymentMethod">Payment Method</label>
+        <select id="paymentMethod" name="paymentMethod" required>
+          <option value="paynow">Paynow (cards/EcoCash)</option>
+          <option value="bank">Bank Transfer (Upload proof)</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="proofUploadGroup" style="display:none;">
+        <label for="proofFile">Upload Proof (jpg, png, pdf)</label>
+        <input id="proofFile" name="proofFile" type="file" accept="image/*,application/pdf">
+      </div>
+
+      <button type="submit" id="bookingSubmit" class="btn">Pay & Book</button>
+    </form>
+
+    <div id="bookingStatus" style="display:none; margin-top:12px;"></div>
+  </div>
+</div>
+</body>
+</html>

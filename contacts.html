@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valley Lodges | Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="top-bar">
+      <p>Honde Valley, Hauna Growth Point, Zimbabwe | +263775698154 | info@valleylodges.com</p>
+    </div>
+
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Valley Lodges Logo" class="logo-img">
+        <span class="logo-text">VALLEY <span>LODGES</span></span>
+      </div>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms & Suites</a></li>
+        <li><a href="dining.html">Dining & Bar</a></li>
+        <li><a href="amenities.html">Our Services</a></li>
+        <li><a href="contacts.html" class="active">Contacts</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact fade-in">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="section-intro">
+      We’d love to hear from you! Whether you’re planning a stay, an event, or simply want more details about Valley Lodges.
+    </p>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contact Details</h3>
+        <p><strong>Address:</strong> Honde Valley, Hauna Growth Point, Zimbabwe</p>
+        <p><strong>Phone:</strong> <a href="tel:+263775698154">+263 775 698 154</a></p>
+       <p><strong>Email:</strong>
+  <a href="mailto:valleylodgesandconference@gmail.com?subject=Inquiry%20from%20Valley%20Lodges%20Website&body=Hello%20Valley%20Lodges%2C%0A%0AI%20would%20like%20to%20inquire%20about...">
+    valleylodgesandconference@gmail.com
+  </a>
+</p>
+        <p><strong>Business Hours:</strong><br> Mon – Sun: 7:00 AM – 10:00 PM</p>
+      </div>
+
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- Map -->
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d421.85303514203645!2d32.852871904272845!3d-18.495497843076933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x192c65d5f435ea5f%3A0xb43ca8c3eea06922!2sThe%20Valley%20Lodges%20and%20Conference%20Centre!5e0!3m2!1sen!2szw!4v1761793121722!5m2!1sen!2szw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- Social Media Section -->
+<!-- Social Media Links -->
+<div class="social-links">
+  <h3>Connect With Us</h3>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/ValleyLodges?__cft__[0]=AZWza_0dvSlTlfzhWKqZYLm9VYIoUy0Oljq-TPaIKTZKakEj6iXL3PNZEj1bx-dJgnKwhiwcqnxh6AqnqBfWsTotqGePteNVAYOrEMDSV9aJc2sHzLO_GFkmw0sdTFjIdlEdX7l9sZwvchGDB4gIpHQsgfDkNXZoCli1Dc2fnqjOYp_3dPCOjuQDlUn_mtWiclrm2_PGE6zbLcZL1JNFpE5iSsi-J_vUGBL7tBCoV2Jl5w&__tn__=-UC%2CP-R" target="_blank" class="facebook" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/valley_lodges?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="instagram" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/263775698154" target="_blank" class="whatsapp" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
+</div>
+
+
+
+  </section>
+
+  <script src="script.js"></script>
+ <script>
+document.getElementById("contactForm").addEventListener("submit", e => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    alert("Please fill in all fields before sending.");
+    return;
+  }
+
+  // Create the mailto link
+  const subject = encodeURIComponent(`Inquiry from ${name}`);
+  const body = encodeURIComponent(
+    `Hello Valley Lodges,%0A%0A${message}%0A%0AFrom: ${name}%0AEmail: ${email}`
+  );
+  const mailtoLink = `mailto:valleylodgesandconference@gmail.com?subject=${subject}&body=${body}`;
+
+  // Show friendly popup
+  const popup = document.createElement("div");
+  popup.textContent = "Opening your email app...";
+  popup.style.position = "fixed";
+  popup.style.top = "50%";
+  popup.style.left = "50%";
+  popup.style.transform = "translate(-50%, -50%)";
+  popup.style.background = "rgba(0, 234, 255, 0.9)";
+  popup.style.color = "#000";
+  popup.style.padding = "20px 40px";
+  popup.style.borderRadius = "12px";
+  popup.style.fontSize = "1.1rem";
+  popup.style.fontWeight = "600";
+  popup.style.boxShadow = "0 0 20px rgba(0, 234, 255, 0.5)";
+  popup.style.zIndex = "9999";
+  document.body.appendChild(popup);
+
+  // Wait briefly, then open email app
+  setTimeout(() => {
+    window.location.href = mailtoLink;
+    popup.remove();
+    e.target.reset();
+  }, 1200);
+});
+</script>
+
+
+  <link rel="stylesheet" href="style.css?v=2">
+</body>
+</html>

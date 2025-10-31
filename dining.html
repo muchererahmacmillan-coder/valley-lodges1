@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dining & Bar | Valley Lodges</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="top-bar">
+      <p>Honde Valley, Hauna Growth Point, Zimbabwe | +263775698154 | info@valleylodges.com</p>
+    </div>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Valley Lodges Logo" class="logo-img">
+        <span class="logo-text">VALLEY <span>LODGES</span></span>
+      </div>
+
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms & Suites</a></li>
+        <li><a href="dining.html" class="active">Dining & Bar</a></li>
+        <li><a href="amenities.html">Our Services</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Dining Hero Section -->
+ <section class="dining-hero">
+  <div class="overlay"></div>
+  <div class="hero-text">
+    <h2>Exquisite Dining & Signature Cocktails</h2>
+    <p>Experience a culinary journey where fine cuisine meets breathtaking valley views.</p>
+  </div>
+</section>
+<section class="menu-tabs">
+  <h2 class="section-title">Our Menu</h2>
+  
+  <div class="tab-buttons">
+    <button class="tab-btn active" data-tab="breakfast">Breakfast</button>
+    <button class="tab-btn" data-tab="lunch">Lunch</button>
+    <button class="tab-btn" data-tab="dinner">Dinner</button>
+  </div>
+
+  <div class="tab-content active" id="breakfast">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Valley Sunrise Omelette <span>$12</span></h3>
+        <p>Fluffy omelette with garden herbs, cheese, and mushrooms.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Fresh Fruit Bowl <span>$9</span></h3>
+        <p>Seasonal fruits served with local honey and mint.</p>
+      </div>
+      <div class="menu-item">
+        <h3>French Toast <span>$10</span></h3>
+        <p>Golden toast topped with maple syrup and cinnamon sugar.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="lunch">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Grilled Chicken Salad <span>$15</span></h3>
+        <p>Light, crisp greens with grilled chicken and citrus dressing.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Seafood Pasta <span>$22</span></h3>
+        <p>Fresh shrimp and calamari tossed in creamy garlic sauce.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Vegetarian Curry <span>$18</span></h3>
+        <p>Rich coconut-based curry with seasonal vegetables.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-content" id="dinner">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <h3>Grilled Ribeye Steak <span>$30</span></h3>
+        <p>Perfectly seared ribeye served with red wine sauce.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Pan-Seared Salmon <span>$28</span></h3>
+        <p>Salmon fillet with lemon butter and steamed vegetables.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Vegetable Risotto <span>$20</span></h3>
+        <p>Classic creamy risotto with roasted vegetables and parmesan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Signature Dishes -->
+  <section class="signature-dishes fade-in">
+  <h2 class="section-title">Our Signature Dishes</h2>
+  <div class="dish-grid">
+    <div class="dish-card">
+      <img src="food/grilled.jpeg" alt="Grilled Steak">
+      <h3>Grilled Steak</h3>
+      <p>Perfectly seared, tender steak served with seasonal vegetables and our chef’s secret sauce.</p>
+    </div>
+    <div class="dish-card">
+      <img src="food/seafoodplatter.jpg" alt="Seafood Platter">
+      <h3>Seafood Platter</h3>
+      <p>A vibrant mix of prawns, calamari, and local fish — fresh from the valley river.</p>
+    </div>
+    <div class="dish-card">
+      <img src="food/vegetarian.jpg" alt="Vegetarian Delight">
+      <h3>Vegetarian Delight</h3>
+      <p>A colorful harmony of farm-fresh vegetables tossed in aromatic herbs and olive oil.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Chef's Philosophy -->
+  <section class="chef-section fade-in">
+    <div class="chef-content">
+      <h2>“Food is an experience — not just a meal.”</h2>
+      <p>Our executive chef believes that dining should excite the senses. At Valley Lodges, every plate tells a story of tradition, flavor, and artistry — crafted with locally sourced ingredients and global inspiration.</p>
+    </div>
+  </section>
+
+  <!-- Reservation CTA -->
+  <section class="dining-cta fade-in">
+    <h2>Reserve Your Table</h2>
+    <p>Join us for an unforgettable culinary experience. Book your table today and indulge in the art of fine dining.</p>
+    <a href="contacts.html" class="btn">Book Now</a>
+  </section>
+
+   <button id="backToTop" title="Go to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
